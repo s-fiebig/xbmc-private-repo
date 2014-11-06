@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="s-fiebig.addon.repository"
+    name="s-fiebig's Addon Repo"
+    version="1.0.0"
+    provider-name="s-fiebig">
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">s-fiebig's Addon Repo</summary>
+        <description lang="en">s-fiebig's test repository for Kodi.</description>
+    </extension>
+    <extension point="xbmc.addon.repository"
+        name="s-fiebig's addon repository">
+        <info compressed="true">https://raw.githubusercontent.com/s-fiebig/xbmc-private-repo/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/s-fiebig/xbmc-private-repo/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/s-fiebig/xbmc-private-repo/master/</datadir>
+    </extension>
+</addon>
+
+<addon id="script.module.password.storage" name="Password Storage" version="0.1.9" provider-name="s-fiebig">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+	</requires>
+	<extension point="xbmc.python.script" library="lib/configure.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Module providing encrypted password storage</summary>
+		<description lang="en">Module providing encrypted password storage via keyrings. Will attempt to use the system keyring if available, or fallback to an internal file based encrypted keyring. Private, original from ruuk.</description>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+		<source>https://github.com/s-fiebig/script.module.password.storage</source>
+	</extension>
+</addon>
+</addons>
